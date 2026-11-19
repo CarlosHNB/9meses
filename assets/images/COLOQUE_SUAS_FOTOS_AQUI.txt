@@ -1,0 +1,7 @@
+Fotos do Arquivo Confidencial (JPG), com estes nomes exatos:
+registro-001.jpg  (Passeio no Shopping)
+registro-002.jpg  (Chá de Casa Nova: Zumbi & Vampira)
+registro-003.jpg  (Dia de Praia e Vento no Cabelo)
+registro-004.jpg  (O Jardim Japonês e a Perseguição)
+registro-005.jpg  (A Corrida Noturna)
+Se o arquivo não existir, o site mostra um espaço reservado automaticamente.

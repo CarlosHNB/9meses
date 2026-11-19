@@ -1,0 +1,2 @@
+Os efeitos sonoros são gerados pelo próprio navegador (sem arquivos).
+Se quiser áudio próprio, coloque aqui arquivos que você tenha direito de usar (nada de música protegida).

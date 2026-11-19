@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d13">
+  <meta name="description" content="Elen Awards 2026 — The 9 Months Edition. Uma premiação de uma pessoa só.">
+  <title>ELEN AWARDS 2026 — The 9 Months Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Elen Awards, início"><span class="brand-star">✦</span> CARLOS STUDIOS</a>
+      <div class="topbar-right">
+        <span class="edition">9 MONTHS EDITION</span>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">♫ SOM: ON</button>
+      </div>
+    </header>
+
+    <main id="app" class="main">
+
+      <!-- ATO 1 — ABERTURA -->
+      <section class="screen active" id="introScreen" aria-labelledby="introTitle">
+        <div class="intro-stage" id="introStage">
+          <div class="pixel-curtain curtain-left"></div>
+          <div class="pixel-curtain curtain-right"></div>
+          <div class="spotlight"></div>
+          <div class="intro-content">
+            <p class="eyebrow blink">★ UMA PRODUÇÃO CARLOS STUDIOS ★</p>
+            <div class="laurel">✦ ───────────── ✦</div>
+            <h1 id="introTitle" class="logo-title">ELEN<br><span>AWARDS</span><br>2026</h1>
+            <p class="subtitle">THE 9 MONTHS EDITION</p>
+            <div class="trophy-hero" aria-hidden="true">
+              <span>★</span><div class="trophy-cup"></div><div class="trophy-stem"></div><div class="trophy-base"></div>
+            </div>
+            <p class="intro-copy">Senhoras e senhores, sejam bem-vindos à maior premiação da história. Uma noite dedicada a reconhecer nove meses de acontecimentos extraordinários.</p>
+            <button class="pixel-btn primary" id="startBtn" type="button">▶ INICIAR CERIMÔNIA</button>
+            <p class="tiny-note">RECOMENDADO: SOM LIGADO E CORAÇÃO PREPARADO</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ATO 2 — TAPETE VERMELHO -->
+      <section class="screen" id="walkScreen" aria-labelledby="walkTitle">
+        <div class="section-heading">
+          <p class="eyebrow">ATO 02 / TAPETE VERMELHO</p>
+          <h2 id="walkTitle">A estrela chegou.</h2>
+          <p>Favor abrir caminho. A única indicada da noite está chegando.</p>
+        </div>
+        <div class="scene-frame">
+          <canvas class="scene-canvas" id="carpetCanvas" aria-label="Elen caminha no tapete vermelho sob aplausos e flashes"></canvas>
+        </div>
+        <div class="dialogue-box clickable" id="walkDialogueBox" role="button" tabindex="0" aria-label="Clique para avançar o diálogo">
+          <span class="speaker">APRESENTADOR</span>
+          <p id="walkDialogue"></p>
+          <span class="dialogue-prompt hidden" id="dialoguePrompt">CLIQUE PARA CONTINUAR ▶</span>
+        </div>
+        <div class="button-row">
+          <button class="pixel-btn secondary" id="walkSkipBtn" type="button">PULAR ⏭</button>
+          <button class="pixel-btn primary" id="walkNextBtn" type="button">CONTINUAR ▶</button>
+        </div>
+      </section>
+
+      <!-- ATO 3 — CATEGORIAS -->
+      <section class="screen" id="awardsScreen" aria-labelledby="awardsTitle">
+        <div class="section-heading">
+          <p class="eyebrow">ATO 03 / A CERIMÔNIA</p>
+          <h2 id="awardsTitle">E os prêmios vão para...</h2>
+          <p>Oito categorias. Uma indicada. Zero concorrência justa.</p>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>PROGRESSO DA CERIMÔNIA</span><span id="progressText">0 / 8</span></div>
+          <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+        </div>
+        <div class="awards-grid" id="awardsGrid"></div>
+        <div class="dialogue-box compact">
+          <span class="speaker">APRESENTADOR</span>
+          <p id="awardComment"></p>
+        </div>
+        <div class="button-row">
+          <button class="pixel-btn secondary" id="secretBtn" type="button">▣ ARQUIVO CONFIDENCIAL</button>
+          <button class="pixel-btn primary" id="finalBtn" type="button" disabled>GRANDE PRÊMIO 🔒</button>
+        </div>
+      </section>
+
+      <!-- ATO 4 — ARQUIVO CONFIDENCIAL -->
+      <section class="screen" id="archiveScreen" aria-labelledby="archiveTitle">
+        <div class="section-heading">
+          <p class="eyebrow">ÁREA RESTRITA / ACESSO AUTORIZADO</p>
+          <h2 id="archiveTitle">Arquivo confidencial</h2>
+          <p>Memórias dos últimos 9 meses. Clique em um registro para descriptografar.</p>
+        </div>
+        <div class="archive-grid" id="archiveGrid"></div>
+        <div class="dialogue-box archive-detail" id="archiveDetail">
+          <span class="speaker">SISTEMA DE ARQUIVOS</span>
+          <p>Selecione um registro. Aviso: alguns arquivos podem causar sorrisos involuntários.</p>
+        </div>
+        <div class="button-row">
+          <button class="pixel-btn" id="backToAwardsBtn" type="button">◀ VOLTAR AOS PRÊMIOS</button>
+          <button class="pixel-btn primary hidden" id="goToFinalFromArchiveBtn" type="button">★ GRANDE PRÊMIO ★</button>
+        </div>
+      </section>
+
+      <!-- ATO 5 e 6 — GRANDE PRÊMIO + CARTA -->
+      <section class="screen" id="finalScreen" aria-labelledby="finalTitle">
+        <div class="final-stage">
+          <p class="eyebrow">ATO 05 / 9º PRÊMIO — CATEGORIA EXTRAORDINÁRIA</p>
+          <div class="final-rays"></div>
+          <div class="scene-frame">
+            <canvas class="scene-canvas" id="stageCanvas" aria-label="Palco da cerimônia: Elen recebe o troféu"></canvas>
+          </div>
+          <h2 id="finalTitle">9º PRÊMIO — THE MOST IMPORTANT AWARD</h2>
+          <p class="final-text" id="finalIntro">Depois de analisar todos os acontecimentos, memórias, histórias e provas reunidas durante os últimos nove meses, a organização chegou a uma conclusão definitiva.</p>
+          <div class="button-row" id="revealRow">
+            <button class="pixel-btn secondary" id="backToAwardsFromRevealBtn" type="button">◀ VOLTAR AOS PRÊMIOS</button>
+            <button class="pixel-btn primary" id="revealWinnerBtn" type="button">▶ ABRIR O ENVELOPE</button>
+          </div>
+
+          <div id="winnerBlock" class="hidden">
+            <div id="winnerReveal" class="hidden">
+              <p class="grand-prize">9º PRÊMIO: PESSOA MAIS IMPORTANTE DA MINHA HISTÓRIA</p>
+              <p class="winner-label">VENCEDORA</p>
+              <div class="winner-name">ELEN,A MINHA BBZINHA!</div>
+              <div class="button-row">
+                <button class="pixel-btn secondary" id="backToAwardsFromWinnerBtn" type="button">◀ VOLTAR AOS PRÊMIOS</button>
+                <button class="pixel-btn primary" id="toLetterBtn" type="button">CONTINUAR ✉</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="final-envelope hidden" id="finalEnvelope">
+            <div class="envelope-seal">♥</div>
+            <p>UMA MENSAGEM<br>EXCLUSIVA PARA VOCÊ.</p>
+            <button class="pixel-btn primary" id="openLetterBtn" type="button">ABRIR ENVELOPE ✉</button>
+          </div>
+
+          <article class="letter hidden" id="loveLetter">
+            <p class="letter-kicker">PARA A MINHA PESSOA FAVORITA</p>
+            <h3>Oi, minha neném!</h3>
+            <p>Hoje é dia 19/11/2026, e eu meio que estou correndo para conseguir fazer todas as coisas até domingo, pois, como é uma surpresa, eu tenho que acabar tudo logo, meu Deus!!!</p>
+            <p>Então, minha princesa, hoje é dia 22/11/2026 e estamos fazendo 9 meses. Tem noção do quão especial isso é? Tipo, mais 3 meses e vamos fazer 1 ano de um excelente namoro.</p>
+            <p>Nosso relacionamento é muito sensacional, tem todas as coisas boas que poderia ter e acredito que no futuro vai ter muito mais.</p>
+            <p>Enquanto escrevo, estou tentando editar também as outras coisas. Talvez esteja se perguntando o motivo de estar fazendo tudo 3 dias antes. Bom, é que basicamente eu estava pensando no que fazer para tentar criar algo novo, e também por conta de estar indo pela manhã diversas vezes, então não deu para fazer tudo de manhã. Inclusive, ontem eu fiquei acordado até um pouquinho depois para conseguir melhorar algumas das coisas que fiz no site que a bbzinha viu. Inclusive, parabéns pelo seu prêmio, hehehehhehehehhe.</p>
+            <p>Amor, esse ano tem sido de ótimas conquistas né? Parabéns por tudo o que você conquistou até aqui, é um exemplo para mim, e isso significa muito. Te ver querendo vencer me dá forças para querer também.</p>
+            <p>E conseguimos, amor! Realmente o espanhol vai rolar e isso é muito bacana, pois significa que, mesmo que de forma básica, estou mais perto de realizar nosso sonho e de viver esse sonho ao seu lado.</p>
+            <p>Vou dar tudo de mim para conseguir te levar para a Espanha e mudar nossa realidade, e sei que vamos conseguir. Amo namorar com você.</p>
+            <p>Quero dizer que te amo muito, e que tenho muito orgulho do que nós estamos nos tornando, é incrível pensar que tudo isso começou tão do nada e rápido, mas que a gente se entende tanto que estamos aqui agora.</p>
+            <p>Já vivemos muitas coisas, meu amor, em 9 meses. Tipo, amanhã dia 20/11/2026 vamos estar indo ao centro comprar algumas coisas e ver outras para a casa. Às vezes parece que é um sonho! Literalmente temos coisas para a casa, amor, e vamos comprando as outras aos poucos.</p>
+            <p>A nossa paciência e resiliência nos levarão a locais incríveis. Depois que estivermos em casa, o próximo passo será casar com você o quanto antes, pois eu tenho mais do que certeza de que é você, bebê.</p>
+            <p>Não há dúvidas de que é você, meu amor. Eu já penso em como vai ser ao entrar na igreja, nos votos que inclusive já sei algumas coisas, viu? (Mas é surpresa, hein!).</p>
+            <p>Também penso no nosso 1 ano e no que posso te dar (embora eu esteja tentando fazer uma coisinha legal, mas também é surpresa, num posso dizer ainda).</p>
+            <p>E, amor, não há palavras, atos e tudo mais que possam mostrar o tanto que te amo. Eu tento todo mês superar o presente do mês passado, mesmo sabendo que se eu te der um chocolate você já vai amar. Mas você merece, amor, realmente merece todo carinho, toda demonstração, todo afeto, toda segurança, tudo. Você merece tudo que te faça enxergar que de fato é uma ótima pessoa e que é muito bom te amar. É sempre um prazer fazer coisinhas para você e, quando eu conseguir, vou fazer muito mais.</p>
+            <p>Bom, amor, queria te dizer algo também: hoje sou um homem muito melhor graças a você. Eu busco pesquisar mais, me desenvolver mais, tentar mais, crescer mais (só que não em altura, num dá mais T-T). É como eu digo: você me trouxe de volta, amor, e isso realmente é muito sensacional.</p>
+            <p>Teve uma coisa que você me falou ontem que me deixou bastante sem jeito mesmo, que foi: “Você tem um coração incrível, isso é absurdamente caro”. E, tipo, eu queria que você soubesse que você também tem um coração incrível e isso é realmente caro. Eu vou proteger esse coração e regá-lo todo dia para que floresça cheio de amor e sem medos.</p>
+            <p>Me desculpe pelas vezes em que não estou legal ou cansado, quando estou mais calado. Ainda preciso aprender algumas coisas e melhorar mais, talvez me abrir mais sobre algumas coisas e tentar te entender melhor.</p>
+            <p>Não me vejo mais sem você, meu amor. A vida ficou muito melhor depois que você chegou, disse sim e confiou segurar na minha mão, e tá segurando até hoje, mesmo eu sendo maluco da cabeça (mas um maluco sutil e legal, não no nível do gelatinoso, com todo respeito a ele).</p>
+            <p>Eu amo você, eu vejo você, eu quero você e eu sou grato por ter você. Tudo o que estiver ao meu alcance eu farei para deixar sua vida o mais confortável, divertida e calma possível. No que depender de mim, tenha certeza de que vai ter. Eu amo ver você brilhar e farei de tudo para te ajudar a brilhar mais ainda. Estarei lá quando todos os seus sonhos estiverem se realizando, aplaudindo de pé e falando para todo mundo: “Essa é minha esposa, ela é muito foda!”.</p>
+            <p class="letter-love">Feliz 9 meses, meu amor!</p>
+            <p>Espero que esteja se sentindo feliz, espero que ao olhar para o passado você possa dizer: “Ainda bem que eu aceitei”. Espero que o mundo seja gentil com você quando eu estiver longe nos dias da semana, e caso ele não seja, eu vou ser. Espero que você ainda sinta que, depois de um dia cheio, precisa ver seu namorado, pois eu sinto que preciso te ver quando tudo está desmoronando.</p>
+            <p>Serei seu, nas vidas passadas, nesta vida e nas vidas futuras, mas como já vivemos nossa história antes, ainda vamos viver nossa história no futuro, eu me concentro em viver a nossa história agora, da melhor maneira possível.</p>
+            <p>O que será que vamos comer hoje? Não faço a mínima ideia, mas vai ser legal, pois vai ser com a bbzinha.</p>
+            <p>Inclusive, é horrível comer sem você, espero que essa distância acabe logo, quero conseguir fazer minhas refeições com a minha princesa.</p>
+            <div class="letter-sign">
+              <p>De: Carlos Henrique<br>Para: O amor da minha vida todinha.</p>
+              <p class="letter-postscript">Parabéns pelos prêmios, meu amor! Você é a dona do meu coração.</p>
+            </div>
+          </article>
+
+          <div class="credits hidden" id="credits">
+            <p>ELEN AWARDS 2026 — THE 9 MONTHS EDITION</p>
+            <p>PRODUÇÃO: CARLOS STUDIOS</p>
+            <p>PROTAGONISTA: ELEN</p>
+            <p>DURAÇÃO: 9 MESES (E CONTANDO...)</p>
+            <p class="credits-last">PRÓXIMA TEMPORADA: EM PRODUÇÃO ✦</p>
+            <div class="button-row credits-actions">
+              <button class="pixel-btn primary" id="backToAwardsFromFinalBtn" type="button">◀ VOLTAR AOS PRÊMIOS</button>
+              <button class="pixel-btn secondary" id="restartBtn" type="button">↻ REINICIAR CERIMÔNIA</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© CARLOS STUDIOS</span>
+      <span>FEITO COM AMOR, PIXELS E UM POUCO DE VERGONHA ALHEIA</span>
+      <button class="footer-reset" id="resetBtn" type="button">↻ REINICIAR</button>
+    </footer>
+  </div>
+
+  <!-- Modal de premiação -->
+  <div class="modal-backdrop hidden" id="awardModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="award-modal">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">×</button>
+      <p class="eyebrow" id="modalEyebrow">AND THE AWARD GOES TO...</p>
+      <div class="modal-trophy" id="modalTrophy">🏆</div>
+      <h2 id="modalTitle">Categoria</h2>
+      <p class="winner-label" id="modalWinnerLabel">VENCEDORA</p>
+      <h3 id="modalWinner">ELEN</h3>
+      <p id="modalDescription"></p>
+      <div class="dialogue-box compact">
+        <span class="speaker">APRESENTADOR</span>
+        <p id="modalJoke"></p>
+      </div>
+      <p class="modal-secret" id="modalSecret"></p>
+      <button class="pixel-btn primary" id="modalContinue" type="button">ACEITAR O PRÊMIO ✦</button>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <script src="assets/sprites/couple-data.js" charset="utf-8"></script>
+  <script src="assets/sprites/ceremony.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

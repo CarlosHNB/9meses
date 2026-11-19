@@ -1,0 +1,5 @@
+couple-data.js  -> sprites do casal extraídos da sua imagem (Elen e Carlos), com roupas de gala:
+                   Elen: vestido preto com glitter dourado | Carlos: smoking preto com gravata borboleta dourada.
+ceremony.js     -> motor das cenas animadas (tapete vermelho e palco), plateia, troféu e efeitos.
+*-gala.png      -> os sprites já vestidos, ampliados 6x, para uso livre.
+Só existe uma pose de cada personagem; o movimento (andar, balanço, aceno) vem de transformações no código.

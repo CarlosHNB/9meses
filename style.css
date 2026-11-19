@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+:root{--bg:#100d18;--panel:#1b1525;--panel2:#241a2e;--gold:#e8bd61;--gold2:#9d6d2c;--cream:#fff0cf;--muted:#b8a9bd;--wine:#7e263d;--pink:#e9a0b1;--line:#58405c;--green:#a7d7a2}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;background:radial-gradient(ellipse at 50% 0%,#33213c 0,#17111f 45%,#0c0a12 100%);color:var(--cream);font-family:'VT323',monospace;font-size:22px;min-height:100vh;image-rendering:pixelated}.scanlines{pointer-events:none;position:fixed;inset:0;z-index:20;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,#000 4px 5px)}.app-shell{max-width:1120px;margin:auto;min-height:100vh;padding:0 24px;display:flex;flex-direction:column}.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #49334e;gap:12px}.brand,.edition,.sound-toggle,.eyebrow,.tiny-note,.progress-label,.pixel-btn,.speaker,.winner-label,.letter-kicker,.credits p{font-family:'Press Start 2P',monospace}.brand{font-size:10px;letter-spacing:1px;color:var(--gold);text-decoration:none}.brand-star{font-size:18px}.topbar-right{display:flex;align-items:center;gap:18px}.edition{font-size:8px;color:#b99fbd}.sound-toggle{font-size:8px;color:var(--gold);background:none;border:1px solid var(--line);padding:10px;cursor:pointer}.main{flex:1;display:flex;align-items:stretch}.screen{display:none;width:100%;padding:36px 0 46px;animation:appear .45s ease}.screen.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}h1,h2,h3,p{margin-top:0}.eyebrow{font-size:9px;line-height:1.8;letter-spacing:1px;color:var(--gold)}.intro-stage{position:relative;overflow:hidden;min-height:650px;border:2px solid #66475e;background:linear-gradient(90deg,#40172d 0 13%,#17101f 13% 87%,#40172d 87%);display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 5px #1b1322,0 18px 55px #0008}.pixel-curtain{position:absolute;top:0;bottom:0;width:14%;background:repeating-linear-gradient(90deg,#5d1e38 0 12px,#7e2945 12px 24px);border:5px solid #381326}.curtain-left{left:0}.curtain-right{right:0}.spotlight{position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:70%;height:80%;background:radial-gradient(ellipse at top, #e9bd6140,transparent 68%);pointer-events:none}.intro-content{position:relative;z-index:1;padding:40px 16px}.blink{animation:blink 1.4s steps(2,start) infinite}@keyframes blink{to{visibility:hidden}}.laurel{color:var(--gold);margin:18px}.logo-title{font-family:'Press Start 2P',monospace;font-size:clamp(38px,8vw,78px);line-height:1.35;letter-spacing:4px;color:#fff0c8;text-shadow:5px 5px #9b602d,9px 9px #3d1d32;margin:20px 0 4px}.logo-title span{color:var(--gold)}.subtitle{font-family:'Press Start 2P',monospace;font-size:10px;color:#e7a6b6;letter-spacing:3px}.intro-copy{line-height:1.15;font-size:27px;margin:20px 0}.tiny-note{font-size:7px;color:#a891a9;margin-top:18px}.trophy-hero{height:145px;width:130px;margin:22px auto 16px;position:relative;display:flex;align-items:center;flex-direction:column;filter:drop-shadow(0 0 15px #e8bd6150)}.trophy-hero>span{position:absolute;top:12px;z-index:2;color:#fff2bc;font-size:22px}.trophy-cup{position:absolute;top:25px;width:66px;height:56px;background:linear-gradient(90deg,#9c6728,#f4d27d 35%,#b47a2c 70%,#f7dc8c);clip-path:polygon(10% 0,90% 0,83% 65%,65% 88%,35% 88%,17% 65%);border:2px solid #ffe6a0}.trophy-cup:before,.trophy-cup:after{content:"";position:absolute;top:12px;width:24px;height:31px;border:7px solid #d9a74d}.trophy-cup:before{left:-19px;border-right:0}.trophy-cup:after{right:-19px;border-left:0}.trophy-stem{position:absolute;top:78px;width:17px;height:22px;background:#c18b3b}.trophy-base{position:absolute;top:98px;width:56px;height:13px;background:#a66e2c;box-shadow:0 7px #74451f}.pixel-btn{border:0;cursor:pointer;padding:16px 20px;background:var(--gold);color:#241626;font-size:10px;box-shadow:0 5px #805526,0 8px 0 #08060b;transition:transform .12s,filter .12s}.pixel-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}.pixel-btn:active{transform:translateY(3px);box-shadow:0 2px #805526}.pixel-btn:disabled{filter:grayscale(.8);opacity:.5;cursor:not-allowed;transform:none}.pixel-btn.primary{background:linear-gradient(#f3d486,#dba94f)}.pixel-btn.secondary{background:#382740;color:#f7dca2;border:1px solid #8e6b91;box-shadow:0 5px #1b1022,0 8px #08060b}.section-heading{text-align:center;margin:10px auto 30px;max-width:700px}.section-heading h2,.final-stage h2{font-family:'Press Start 2P',monospace;font-size:clamp(19px,3.2vw,30px);line-height:1.6;color:var(--gold);margin:10px 0}.section-heading>p:last-child{color:var(--muted)}.redcarpet-scene{height:280px;position:relative;overflow:hidden;border:2px solid #5d4262;background:linear-gradient(#241a32 0 55%,#100c17 55%);margin-bottom:20px}.redcarpet-scene:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 10%,#e8bd6144,transparent 18%),radial-gradient(circle at 85% 10%,#e8bd6144,transparent 18%)}.carpet{position:absolute;bottom:0;left:25%;right:25%;height:75%;background:repeating-linear-gradient(90deg,#7b203e 0 14px,#912b4a 14px 28px);clip-path:polygon(25% 0,75% 0,100% 100%,0 100%);border-top:5px solid #e4b960}.rope{position:absolute;bottom:25px;height:100px;width:20%;border-top:5px solid #d8ae5a}.rope-left{left:4%;border-radius:0 50% 0 0}.rope-right{right:4%;border-radius:50% 0 0 0}.pixel-person{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);width:50px;height:120px;image-rendering:pixelated}.pixel-person .head{position:absolute;top:4px;left:12px;width:27px;height:27px;background:#e9b58c;box-shadow:0 -8px #382035,7px -5px #382035,-5px 0 #382035}.pixel-person .hair{position:absolute;top:0;left:9px;width:33px;height:19px;background:#3b1e2e;z-index:1;box-shadow:0 9px #3b1e2e,8px 16px #3b1e2e,-5px 13px #3b1e2e}.pixel-person .body{position:absolute;top:34px;left:8px;width:36px;height:43px;background:#17131d;box-shadow:0 0 0 4px #d5a84f}.pixel-person .legs{position:absolute;top:78px;left:12px;width:12px;height:35px;background:#d9a95a;box-shadow:17px 0 #d9a95a,0 31px #251522,17px 31px #251522}.pixel-star{position:absolute;color:var(--gold);font-size:32px;animation:twinkle 1.5s infinite alternate}.star-a{top:24px;left:20%}.star-b{top:65px;right:18%;animation-delay:.5s}@keyframes twinkle{to{opacity:.25;transform:scale(.7)}}.camera-flash{position:absolute;right:12%;top:45%;color:#ffe9a3;animation:flash 2s infinite}@keyframes flash{0%,75%,100%{opacity:0}80%{opacity:1;text-shadow:0 0 20px white}}.dialogue-box{max-width:780px;margin:18px auto;padding:18px 22px;background:#21192b;border:2px solid #77577a;box-shadow:5px 5px #09070e;line-height:1.25}.dialogue-box p{margin:8px 0 0}.speaker{font-size:8px;color:var(--pink);letter-spacing:1px}.button-row{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:26px auto}.progress-wrap{max-width:780px;margin:0 auto 25px}.progress-label{font-size:8px;color:#c6adc9;display:flex;justify-content:space-between;margin-bottom:9px}.progress-track{height:12px;background:#211729;border:1px solid #745a77;padding:2px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#a66c35,#f0d17c);transition:width .4s}.awards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:900px;margin:auto}.award-card{display:flex;align-items:center;text-align:left;gap:14px;padding:17px;background:linear-gradient(135deg,#2b2034,#1a1422);border:2px solid #614866;color:var(--cream);font-family:'VT323',monospace;font-size:21px;cursor:pointer;min-height:106px;box-shadow:4px 4px #08060b;transition:.15s}.award-card:hover{border-color:var(--gold);transform:translateY(-3px)}.award-card.completed{border-color:#b88c4c;background:linear-gradient(135deg,#3a2a2b,#211a27)}.award-card .medal{font-size:34px;min-width:42px;text-align:center}.award-card strong{display:block;color:var(--gold);font-family:'Press Start 2P',monospace;font-size:8px;line-height:1.7;margin-bottom:5px}.award-card small{display:block;color:#b6a3b9;font-size:16px}.compact{max-width:900px}.archive-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:850px;margin:auto}.archive-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:17px;background:#1e1928;border:2px dashed #77577a;color:var(--cream);font-family:'VT323',monospace;font-size:21px;cursor:pointer;text-align:left}.archive-card:hover{border-color:var(--gold);background:#2d2032}.archive-card strong{font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold)}.archive-card small{font-size:15px;color:#b69ab5}.file-icon{font-size:27px;color:var(--pink)}.archive-detail{min-height:110px}.final-stage{text-align:center;position:relative;max-width:850px;margin:auto;padding:30px 0}.final-rays{position:absolute;top:40px;left:50%;transform:translateX(-50%);width:100%;height:300px;background:radial-gradient(ellipse,#e7bd6130,transparent 68%);pointer-events:none}.final-trophy{transform:scale(1.3);margin:38px auto 50px}.final-stage h2{position:relative}.final-subtitle{font-family:'Press Start 2P',monospace;font-size:8px;color:#d7a9b6;line-height:2}.final-envelope{position:relative;max-width:400px;margin:35px auto;padding:32px 20px;background:linear-gradient(145deg,#4a293d,#291b30);border:2px solid #c69b58;box-shadow:7px 7px #09070e}.final-envelope p{font-family:'Press Start 2P',monospace;font-size:9px;line-height:2;color:#f5dca2;margin:12px}.envelope-seal{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#a33c58;color:#ffe3a4;margin:0 auto 15px;border:3px solid #e2b967}.letter{max-width:960px;margin:28px auto;padding:34px 44px;background:#f3e4c4;color:#3a2632;text-align:left;box-shadow:8px 8px #09070e;border:5px double #a67b45;font-size:24px;line-height:1.25;animation:appear .6s}.letter h3{font-family:'Press Start 2P',monospace;font-size:17px;color:#6b2d48;margin:18px 0}.letter-kicker{font-size:8px;color:#9b7047}.letter-love{font-weight:bold;color:#8c2e4c;font-size:27px}.letter-sign{text-align:right;font-size:26px}.credits{margin:40px auto 0;padding:25px;border-top:1px solid #6c526c;color:#cbb7c9}.credits p{font-size:8px;line-height:2.4}.credits .credits-last{color:var(--gold);font-size:10px;margin-top:18px}.hidden{display:none!important}.footer{display:flex;justify-content:space-between;gap:15px;padding:18px 0;border-top:1px solid #3b2b43;color:#8e7b94;font-family:'Press Start 2P',monospace;font-size:7px;line-height:1.8}.modal-backdrop{position:fixed;inset:0;z-index:30;background:#09060de8;display:grid;place-items:center;padding:18px}.award-modal{position:relative;width:min(560px,100%);max-height:90vh;overflow:auto;text-align:center;padding:35px 28px;background:linear-gradient(145deg,#2d2037,#17111f);border:3px solid #bd914e;box-shadow:0 0 0 5px #24172a,0 0 55px #d8a84b40}.modal-close{position:absolute;right:12px;top:8px;background:none;border:0;color:#f3d18a;font-size:30px;cursor:pointer}.modal-trophy{font-size:60px;margin:15px}.award-modal h2{font-family:'Press Start 2P',monospace;font-size:17px;line-height:1.7;color:var(--gold)}.winner-label{font-size:8px;color:#b89cb8}.award-modal h3{font-family:'Press Start 2P',monospace;font-size:25px;color:#fff0c9;margin:10px}.award-modal>p:not(.eyebrow):not(.winner-label){line-height:1.3}.award-modal .dialogue-box{text-align:left}.award-modal .pixel-btn{margin-top:15px}.footer{margin-top:auto}
+@media(max-width:680px){.app-shell{padding:0 13px}.topbar{height:auto;min-height:60px;flex-wrap:wrap;padding:10px 0}.brand{font-size:8px}.topbar-right{gap:8px}.edition{font-size:6px}.sound-toggle{font-size:7px;padding:8px}.screen{padding:24px 0 35px}.intro-stage{min-height:570px}.pixel-curtain{width:9%}.logo-title{font-size:clamp(33px,11vw,58px)}.subtitle{font-size:8px}.intro-copy{font-size:23px}.awards-grid,.archive-grid{grid-template-columns:1fr}.award-card{min-height:88px}.button-row{flex-direction:column;align-items:stretch;padding:0 8px}.button-row .pixel-btn{width:100%}.footer{flex-direction:column;text-align:center;font-size:6px}.letter{padding:22px 20px}.letter h3{font-size:14px}.section-heading h2{font-size:18px}.progress-label{font-size:7px}.redcarpet-scene{height:240px}.dialogue-box{padding:14px 16px}.award-modal{padding:30px 18px}.award-modal h2{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* ==========================================================
+   ADIÇÕES v2 — estrelas, arquivo, grande prêmio, toast
+   ========================================================== */
+.star-dot{position:absolute;width:3px;height:3px;background:#fff0c8;box-shadow:0 0 6px #e8bd61;animation:twinkle 2.4s infinite alternate;pointer-events:none}
+
+.award-info{display:block;flex:1;min-width:0}
+.award-card.completed .award-info small{color:var(--green)}
+.award-modal h3{font-size:clamp(14px,4.4vw,22px);line-height:1.5;word-break:break-word}
+.modal-secret{font-size:22px;color:var(--pink);margin:14px 0 4px}
+
+.archive-card.locked{opacity:.85}
+.archive-card.open{border-style:solid;border-color:#b88c4c}
+.terminal{font-family:'VT323',monospace;color:var(--green);word-break:break-all}
+.archive-detail{text-align:left}
+.photo-slot{position:relative;width:100%;max-width:270px;margin:14px auto;border:3px solid #c69b58;background:#120d18;overflow:hidden;box-shadow:5px 5px #09070e;line-height:0}
+.photo-slot img{width:100%;height:auto;max-height:500px;object-fit:contain;display:block}
+.photo-slot .photo-hint{display:none}
+.photo-slot.empty{aspect-ratio:9/16;min-height:300px;background:repeating-linear-gradient(45deg,#1a1422 0 10px,#211829 10px 20px)}
+.photo-slot.empty .photo-hint{display:flex;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;padding:14px;font-family:'Press Start 2P',monospace;font-size:7px;line-height:2;color:#a891a9}
+.stamp{position:absolute;bottom:12px;right:10px;transform:rotate(-6deg);font-family:'Press Start 2P',monospace;font-size:7px;color:#ff7f90;border:2px solid #ff7f90;padding:5px 7px;background:#100d13dd;z-index:2;letter-spacing:1px;box-shadow:0 0 8px #000a}
+.archive-title{font-family:'Press Start 2P',monospace;font-size:12px;line-height:1.7;color:var(--gold);margin:12px 0 6px}
+.archive-meta{font-family:'Press Start 2P',monospace;font-size:7px;line-height:2.2;color:#c6adc9}
+.archive-text{font-size:24px;line-height:1.2;min-height:3em}
+
+.final-text{max-width:620px;margin:10px auto 18px;font-size:25px;line-height:1.2;color:var(--cream);position:relative}
+.grand-prize{font-family:'Press Start 2P',monospace;font-size:clamp(11px,2.6vw,16px);line-height:2;color:var(--cream);max-width:640px;margin:18px auto 6px;position:relative}
+.winner-name{font-family:'Press Start 2P',monospace;font-size:clamp(34px,10vw,72px);color:#fff0c8;text-shadow:5px 5px #9b602d,9px 9px #3d1d32,0 0 30px #e8bd61;margin:8px 0 14px;animation:pop .7s cubic-bezier(.2,1.4,.4,1) both;position:relative}
+@keyframes pop{0%{transform:scale(.2);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+.pixel-btn.pulse{animation:pulseBtn 1.1s ease-in-out infinite}
+@keyframes pulseBtn{50%{transform:translateY(-3px);filter:brightness(1.25)}}
+
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:40;max-width:min(520px,92vw);padding:14px 18px;background:#21192b;border:2px solid var(--gold);box-shadow:5px 5px #09070e;font-size:21px;text-align:center;line-height:1.2}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:25}
+
+.footer-reset{background:none;border:1px solid #3b2b43;color:#8e7b94;font-family:'Press Start 2P',monospace;font-size:7px;padding:8px;cursor:pointer}
+.footer-reset:hover{color:var(--gold);border-color:var(--gold)}
+
+@media(max-width:680px){
+  .final-text{font-size:22px}
+  .archive-text{font-size:22px}
+}
+
+/* ---------- cenas animadas (canvas 384x216 ampliado) ---------- */
+.scene-frame{max-width:960px;margin:0 auto 20px;border:3px solid var(--gold);box-shadow:0 0 0 5px #1b1322,0 14px 40px #000a;background:#100d13;line-height:0}
+.scene-canvas{width:100%;height:auto;aspect-ratio:16/9;display:block;image-rendering:crisp-edges;image-rendering:pixelated}
+.final-stage{max-width:960px}
+@media(max-width:680px){.scene-frame{border-width:2px;box-shadow:0 0 0 3px #1b1322}}
+
+/* ---------- ajustes de enquadramento (tudo visível sem rolar no desktop) ---------- */
+.scene-frame{max-width:min(960px,max(320px,calc((100vh - 340px) * 1.7778)))}
+.logo-title{font-size:clamp(30px,5.2vw,62px);margin:14px 0 4px}
+.intro-stage{min-height:600px}
+.intro-copy{font-size:24px;max-width:760px;margin:16px auto}
+.trophy-hero{margin:14px auto 10px}
+@media(max-width:680px){.scene-frame{max-width:100%}.logo-title{font-size:clamp(30px,10vw,52px)}}
+
+/* confete aparece por cima do modal de premiação */
+#fx{z-index:60}
+
+/* Diálogo clicável com prompt */
+.dialogue-box.clickable{cursor:pointer;position:relative;transition:border-color .15s,background-color .15s}
+.dialogue-box.clickable:hover{border-color:var(--gold);background:#291e36}
+.dialogue-prompt{display:block;margin-top:12px;font-family:'Press Start 2P',monospace;font-size:8px;color:var(--gold);text-align:right;animation:blink 1.2s steps(2,start) infinite}
+
+/* ---------- Ajustes da Carta e Ações Finais ---------- */
+.letter{max-width:960px;font-size:22px;padding:34px 44px;overflow-wrap:break-word;word-break:break-word}
+.letter p{margin-bottom:12px;line-height:1.26}
+.letter h3{margin:12px 0 14px;font-size:16px}
+.letter-love{margin:18px 0 8px;font-size:25px}
+.letter-sign{margin-top:20px;padding-top:14px;border-top:2px dashed #b88c4c;text-align:right;font-size:22px}
+.letter-sign p{margin-bottom:6px}
+.letter-postscript{margin-top:14px;text-align:center;font-size:22px;font-weight:bold;color:#6b2d48}
+.credits-actions{margin-top:26px}
+
+@media(max-width:680px){
+  .letter{padding:20px 14px;font-size:19px;width:100%}
+  .letter p{margin-bottom:10px;line-height:1.24}
+  .letter h3{font-size:14px;margin:10px 0 12px}
+  .letter-love{font-size:21px}
+  .letter-sign{font-size:19px;margin-top:16px;padding-top:10px}
+  .letter-postscript{font-size:19px}
+  .photo-slot{max-width:min(260px,calc(100vw - 48px))}
+  .award-modal{width:min(560px,calc(100vw - 20px));padding:24px 14px}
+  .award-modal h2{font-size:14px;line-height:1.5}
+  .button-row{gap:10px;padding:0}
+}
+
